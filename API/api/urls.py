@@ -1,9 +1,12 @@
 from django.urls import path
-from .views import LeadListView, LeadCreateView
+from .views import StudentListView,StudentCreateView,StudentUpdateView, StudentDeleteView
 
 urlpatterns = [
    
-    path('', LeadListView.as_view(),name="lead_list" ),
-    path('create/', LeadCreateView.as_view(),name="create" ),
+    path('', StudentListView.as_view(),name="stud_list" ),
+    path('create/', StudentCreateView.as_view(),name="create" ),
+    path('update/<int:pk>/', StudentUpdateView.as_view(),name="update" ),
+    path('delete/<int:pk>/', StudentDeleteView.as_view(),name="delete" ),
+
 
 ]

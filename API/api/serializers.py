@@ -1,14 +1,14 @@
 from rest_framework import serializers
-from django.contrib.auth import get_user_model
-from .models import Agent    
-User = get_user_model()
+# # from django.contrib.auth import get_user_model
+from .models import Student  
+# # User = get_user_model()
 
-class LeadSerializer(serializers.ModelSerializer):
+class StudentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ['username','email','is_organizer','is_agent']
+        model = Student
+        fields = ['name','roll','city',]
 
-class AgentCreateSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Agent
-        fields = ['user','organizations']
+# class StudentCreateSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Student
+#         fields = '__all__'
