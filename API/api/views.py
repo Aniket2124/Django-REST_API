@@ -4,7 +4,7 @@ from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, D
 # from .models import Lead, UserProfile,User
 from .serializers import StudentSerializer
 from .models import Student
-from rest_framework.authentication import BasicAuthentication, SessionAuthentication
+from rest_framework.authentication import BasicAuthentication, SessionAuthentication, TokenAuthentication
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser, IsAuthenticatedOrReadOnly
 # from rest_framework import status
 # # Create your views here.
